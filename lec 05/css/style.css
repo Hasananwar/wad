@@ -26,12 +26,19 @@ header li {
     list-style: none;
     display: inline-block;
 }
-
+.img
+{
+    cursor: pointer;
+}
+.img:hover{
+    box-shadow: chocolate;
+    border:  solid ;
+    border-radius: 30px;
+}
 /*
 p {
     color: blue;
 }
-
 p {
     color: green;
 }*/
