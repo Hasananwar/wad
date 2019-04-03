@@ -1,0 +1,18 @@
+.box{
+
+    color: red;
+    border:5px solid blue;
+    display: inline-block;
+    padding:10px 50px ;
+    margin: 5px 50px 0 25px;
+    width: 100px;
+    height: 80px;
+}
+.highlight{
+    text-decoration: underline;
+    letter-spacing: 5px;
+    font-style: italic;
+    word-spacing: 10px ;
+    font-size: 100%;
+    font-family: "Courier New";
+}
