@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <?php
 $con = mysqli_connect("localhost", "root","","techboxdb");
