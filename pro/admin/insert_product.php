@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<?php
+$con=mysqli_connect("localhost","root",'','textboxdb');
+if(isset($_POST['insert_pro'])) {
+    $title = $_POST['pro_title'];
+    $category = $_POST['pro_cat'];
+
+    $q='insert into products(pro_title,pro_cat,pro_brand,pro_details,pro_key,pro_price) values('$title','$category','$brand',)'
+}
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,6 +39,7 @@
                         <div class="input-group-text"><i class="fas fa-file-signature"></i></div>
                     </div>
                     <input type="text" class="form-control" id="pro_title" name="pro_title"
+
                            placeholder="Enter Product Title">
                 </div>
             </div>
@@ -44,6 +54,15 @@
                     </div>
                     <select class="form-control" id="pro_cat" name="pro_cat">
                         <option>Select Category</option>
+                        <?php
+                        $catQuery = "select * from categories";
+                        $catQueryResult= mysqli_query($con,$catQuery);
+                        while($row= mysqli_fetch_assoc($catQueryResult))
+                        {
+                            $title=$row['category_title'];
+                            echo '<option>'.$categories.'</option>';
+                        }
+                        ?>
                     </select>
                 </div>
             </div>
@@ -59,6 +78,15 @@
                         <div class="input-group-text"><i class="fas fa-stamp"></i></div>
                     </div>
                     <select class="form-control" id="pro_brand" name="pro_brand">
+                        <?php
+                        $catQuery = "select * from brands";
+                        $catQueryResult= mysqli_query($con,$catQuery);
+                        while($row= mysqli_fetch_assoc($catQueryResult))
+                        {
+                            $title=$row['brand_name'];
+                            echo '<li><a class=\'nav-link\'  href=\'#\'>'.$title.'</a></li>';
+                        }
+                        ?>
                         <option>Select Brand</option>
                     </select>
                 </div>
