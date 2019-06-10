@@ -6,7 +6,8 @@ if(isset($_POST['insert_pro']))
     print_r($_POST);
     $title=$_POST['pro_title'];
     $cat=$_POST['pro_cat'];
-    $q="insert into products(pro_title, pro_cat) values('$title','$cat')";
+    $brand=$_POST['pro_brand'];
+    $q="insert into products(pro_title, pro_cat,pro_brand) values('$title','$cat','$brand')";
     mysqli_query($con, $q);
 }
 /*echo
@@ -111,7 +112,7 @@ echo */
                 <label for="pro_price" class="float-md-right"> <span class="d-sm-none d-md-inline"> Product </span>
                     Price:</label>
             </div>
-            <div class="col-sm-9 col-md-8 col-lg-4 col-xl-4">
+            <div class="col-sm-9 col-md-8 col-lg-4 col-xl-4" >
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <div class="input-group-text"><i class="fas fa-money-bill"></i></div>
