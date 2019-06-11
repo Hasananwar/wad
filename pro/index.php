@@ -1,7 +1,7 @@
  <!DOCTYPE html>
 <html lang="en">
 <?php
-$con = mysqli_connect("localhost", "root","","techboxdb");
+$con = mysqli_connect("localhost", "root","","textboxdb");
 if(!$con)
 {
     echo "not connected";
