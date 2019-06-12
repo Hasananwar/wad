@@ -43,7 +43,7 @@ if(isset($_POST['insert_pro'])){
 <body>
 
 <div class="container-fluid">
-    <h1 class="text-center my-4"><i class="fas fa-plus fa-md"></i> <span class="d-none d-sm-inline"> Add New </span>
+    <h1 class="text-center my-4"><i class="fas fa-plus fa-md"></i> <span class="d-none d-sm-inline"> Add New  </span>
         Product </h1>
     <form action="" method="post" enctype="multipart/form-data">
         <div class="row">
