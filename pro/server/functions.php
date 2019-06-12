@@ -1,6 +1,6 @@
-
 <?php
 require_once "db_connection.php";
+
 function getCats(){
     global $con;
     $getCatsQuery = "select * from categories";
@@ -21,3 +21,6 @@ function getBrands(){
         echo "<li><a class='nav-link'  href=''#'>$brand_title</a></li>";
     }
 }
+
+
+
